@@ -1,0 +1,42 @@
+/* Mobile Layout - Show the menu button */
+@media (max-width: 1024px) {
+  .menu-button {
+    display: block; /* Show menu button on mobile/tablet */
+    position: fixed;
+    top: 10px;
+    right: 10px; /* Move the button to the right side */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* When menu is active, show the navigation links */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    display: block;
+  }
+}
